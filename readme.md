@@ -14,6 +14,7 @@ This bot currently (or will) ingest data from **Open Weather API** and the **Uni
 - Pull in water level data using the US Geologic Survey's API to get information about river conditions
 - Include information about river conditions, or just recommend to stick to lakes. 
 - If it's a bad day for kayaking, look ahead to tomorrow and tweet if tomorrow's conditions are favorable
+- Maybe explore generating an image to include with the tweet that has additional information
 
 ## DON'T:
 
