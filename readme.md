@@ -6,6 +6,8 @@ https://twitter.com/BotKayak
 
 Right now, it's just pulling in local weather data for Raleigh. 
 
+This bot currently (or will) ingest data from **Open Weather API** and the **United States Geologic Survey API**. 
+
 ## TODO:
 
 - Expand to Durham and Orange counties
