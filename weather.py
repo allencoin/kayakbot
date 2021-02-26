@@ -12,7 +12,7 @@ city_lon = "-78.6500"
 
 complete_url = base_url + "lat=" + city_lat + "&lon=" + city_lon + "&appid=" + api_key + "&units=imperial&lang=us&cnt=1"
 
-print(complete_url)
+# print(complete_url)
 
 response = requests.get(complete_url) 
 
@@ -121,8 +121,4 @@ feels_like_statement = "It'll feel like " + str(feels_like_today) + ". "
 
 weather_statement = what_kind_of_day_is_it + "It'll be " + conditions_statement + " with a " + chance_of_rain_statement + " and a high of " + high_today_statement + feels_like_statement + uv_statement
 
-print(weather_statement)
-
-
-
-# Add qualifying statements like if it's going to be over 90 say "it's a hot one", if it's going to be 69 say "nice"
+# print(weather_statement)
