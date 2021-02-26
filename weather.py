@@ -119,6 +119,6 @@ uv_statement = "Wear sunscreen! The UV index will be " + str(uvi_today) + ". "
 
 feels_like_statement = "It'll feel like " + str(feels_like_today) + ". "
 
-weather_statement = what_kind_of_day_is_it + "It'll be " + conditions_statement + " with a " + chance_of_rain_statement + " and a high of " + high_today_statement + feels_like_statement + uv_statement
+weather_statement = what_kind_of_day_is_it + "In Raleigh it'll be " + conditions_statement + " with a " + chance_of_rain_statement + " and a high of " + high_today_statement + feels_like_statement + uv_statement
 
 # print(weather_statement)
