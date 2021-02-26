@@ -21,7 +21,7 @@ Right now, it's just pulling in local weather data for Raleigh.
 
 If you want to clone this and set it up on your own: 
 
-1. Add a file called **constants.py** and add the following: 
+1. Add a file called `constants.py` and add the following: 
 
 ```
 WEATHER_API_KEY = "YOUR TOKEN HERE"
