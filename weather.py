@@ -56,7 +56,6 @@ if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_tod
 	is_it_a_good_day_to_kayak = 1
 else:
 	print("Today is not a good day to kayak.")
-	exit()
 
 import random
 
@@ -82,7 +81,7 @@ for s in conditions_today:
 	elif s["id"] == 803:
 		conditions_statement = "overcast"
 	else:
-		conditions_statement = "it's not great"
+		conditions_statement = "not great :("
 
 high_today_statement = str(high_today) + "°. "
 
