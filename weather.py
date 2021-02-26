@@ -52,12 +52,11 @@ for s in conditions_today:
 
 is_it_a_good_day_to_kayak = 0
 
-if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_today < 20:
+if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_today < 15:
 	is_it_a_good_day_to_kayak = 1
-	######### Should just exit if it's not a good day to kayak
-	# else:
-		# print("Today is not a good day to kayak.")
-		# exit()
+else:
+	print("Today is not a good day to kayak.")
+	exit()
 
 import random
 
