@@ -1,3 +1,4 @@
+#!/usr/bin/python3.7
 # Here, if it's good weather to kayak and depending on how the river conditions are, I'll compose a tweet and tweet it
 import tweepy
 import constants
