@@ -86,7 +86,7 @@ for s in conditions_today:
 	elif s["id"] == 803:
 		conditions_statement = "overcast"
 	else:
-		conditions_statement = "unfavorable"
+		conditions_statement = "not ideal conditions"
 
 high_today_statement = str(high_today) + "°. "
 
