@@ -7,8 +7,8 @@ base_url = "https://api.openweathermap.org/data/2.5/onecall?"
 
 # This is just doing Wake County right now but needs to be expanded
 city_id = "4497286"
-city_lat = "35.7900"
-city_lon = "-78.6500"
+city_lat = "35.743504"
+city_lon = "-78.6687492"
 
 complete_url = base_url + "lat=" + city_lat + "&lon=" + city_lon + "&appid=" + api_key + "&units=imperial&lang=us"
 
@@ -60,6 +60,9 @@ what_kind_of_day_is_it = ""
 if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_today < 15 and wind_today <= 16:
 	is_it_a_good_day_to_kayak = 1
 	what_kind_of_day_is_it = "It's a good day to kayak! "
+elif 300 <= conditions_today_int <= 503 and chance_of_rain_today < 5 and 54 <= high_today <= 93 and wind_today <= 16:
+	is_it_a_good_day_to_kayak = 1
+	what_kind_of_day_is_it = "It's a halfway decent day to kayak. "
 else:
 	print("Today is not a good day to kayak.")
 	what_kind_of_day_is_it = "It's not a very good day to kayak :( "
@@ -73,20 +76,18 @@ if 800 <= conditions_today_int <= 802 and 65 <= high_today <= 85 and chance_of_r
 	what_kind_of_day_is_it = "It's " + random.choice(enthusiastic_words) + " day to kayak!!! "
 
 
-
-for s in conditions_today:
-	if s["id"] == 800:
-		conditions_statement = "sunny"
-	elif s["id"] == 801:
-		conditions_statement = "a little cloudy"
-	elif s["id"] == 802:
-		conditions_statement = "partly cloudy"
-	elif s["id"] == 803:
-		conditions_statement = "cloudy"
-	elif s["id"] == 803:
-		conditions_statement = "overcast"
-	else:
-		conditions_statement = "not ideal conditions"
+if 300 <= conditions_today_int <= 503 and chance_of_rain_today < 5:
+	conditions_statement = "it might rain"
+if conditions_today_int == 800:
+	conditions_statement = "it'll be sunny"
+if conditions_today_int == 801:
+	conditions_statement = "it'll be a little cloudy"
+if conditions_today_int == 802:
+	conditions_statement = "it'll be partly cloudy"
+if conditions_today_int == 803:
+	conditions_statement = "it'll be cloudy"
+if conditions_today_int == 803:
+	conditions_statement = "it'll be overcast"
 
 high_today_statement = str(high_today) + "°. "
 
@@ -135,6 +136,6 @@ uv_statement = "Wear sunscreen! The UV index will be " + str(uvi_today) + ". "
 
 feels_like_statement = "It'll feel like " + str(feels_like_today) + "°. "
 
-weather_statement = what_kind_of_day_is_it + "In Raleigh it'll be " + conditions_statement + " with a " + chance_of_rain_statement + " and a high of " + high_today_statement + feels_like_statement + uv_statement + wind_today_statement
+weather_statement = what_kind_of_day_is_it + "In Raleigh " + conditions_statement + " with a " + chance_of_rain_statement + " and a high of " + high_today_statement + feels_like_statement + uv_statement + wind_today_statement
 
-# print(weather_statement)
+print(weather_statement)
