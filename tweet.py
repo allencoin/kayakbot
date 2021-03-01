@@ -19,6 +19,8 @@ api = tweepy.API(auth)
 
 if weather.is_it_a_good_day_to_kayak == 1:
 	api.update_status(weather.weather_statement)
+if weather.there_was_an_error == 1:
+	api.update_status("I encountered an error trying to get weather data. @Allen_Coin, plz fix me :(")
 else:
 	print("It's not a good day to kayak")
 	# api.update_status("Today is not a good day to kayak :(")
