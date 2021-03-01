@@ -33,7 +33,7 @@ if response.status_code == 200:
 	conditions_today = weather_today["weather"]
 
 	# get chance of rain
-	chance_of_rain_today = weather_today["pop"]
+	chance_of_rain_today = weather_today["pop"] * 100
 
 	#get uvi today
 	uvi_today = weather_today["uvi"]
@@ -61,17 +61,20 @@ if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_tod
 	is_it_a_good_day_to_kayak = 1
 	what_kind_of_day_is_it = "It's a good day to kayak! "
 elif 300 <= conditions_today_int <= 503 and chance_of_rain_today < 5 and 54 <= high_today <= 93 and wind_today <= 16:
-	is_it_a_good_day_to_kayak = 0
+	is_it_a_good_day_to_kayak = 1
 	what_kind_of_day_is_it = "It's a halfway decent day to kayak. "
 else:
 	print("Today is not a good day to kayak.")
 	what_kind_of_day_is_it = "It's not a very good day to kayak :( "
+	# Like my meemaw used to say, there ain't no need to tweet if it ain't a good day to kayak
+	exit()
 
 import random
 
 enthusiastic_words = ["a FANTASTIC", "an AMAZING", "a WONDERFUL", "a GORGEOUS", "a STUPENDOUS", "an AWESOME"]
 
 if 800 <= conditions_today_int <= 802 and 65 <= high_today <= 85 and chance_of_rain_today < 5 and wind_today <= 10:
+	is_it_a_good_day_to_kayak = 1
 	is_it_a_fantastic_day_to_kayak = 1
 	what_kind_of_day_is_it = "It's " + random.choice(enthusiastic_words) + " day to kayak!!! "
 
@@ -88,6 +91,8 @@ if conditions_today_int == 803:
 	conditions_statement = "it'll be cloudy"
 if conditions_today_int == 803:
 	conditions_statement = "it'll be overcast"
+else:
+	conditions_statement = "it's not great out"
 
 high_today_statement = str(high_today) + "°. "
 
