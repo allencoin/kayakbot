@@ -61,7 +61,7 @@ if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_tod
 	is_it_a_good_day_to_kayak = 1
 	what_kind_of_day_is_it = "It's a good day to kayak! "
 elif 300 <= conditions_today_int <= 503 and chance_of_rain_today < 5 and 54 <= high_today <= 93 and wind_today <= 16:
-	is_it_a_good_day_to_kayak = 1
+	is_it_a_good_day_to_kayak = 0
 	what_kind_of_day_is_it = "It's a halfway decent day to kayak. "
 else:
 	print("Today is not a good day to kayak.")
