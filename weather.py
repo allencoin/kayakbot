@@ -6,6 +6,10 @@ api_key = constants.WEATHER_API_KEY
 base_url = "https://api.openweathermap.org/data/2.5/onecall?"
 
 # This is just doing Wake County right now but needs to be expanded
+# I am not a huge fan of how OpenWeatherAPI handles locations for their free
+# OneCall API, which requires you to put in latitude and longitude instead of just a 
+# city name like all their other APIs. Probably should update to use a better
+# free weather API if it exists. 
 city_id = "4497286"
 city_lat = "35.743504"
 city_lon = "-78.6687492"
@@ -57,10 +61,10 @@ is_it_a_good_day_to_kayak = 0
 
 what_kind_of_day_is_it = ""
 
-if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_today < 15 and wind_today <= 16:
+if conditions_today_int >= 800 and 54 <= high_today <= 93 and chance_of_rain_today < 50 and wind_today <= 16:
 	is_it_a_good_day_to_kayak = 1
 	what_kind_of_day_is_it = "It's a good day to kayak! "
-elif 300 <= conditions_today_int <= 503 and chance_of_rain_today < 5 and 54 <= high_today <= 93 and wind_today <= 16:
+elif 300 <= conditions_today_int <= 503 and chance_of_rain_today < 33 and 54 <= high_today <= 93 and wind_today <= 16:
 	is_it_a_good_day_to_kayak = 1
 	what_kind_of_day_is_it = "It's a halfway decent day to kayak. "
 else:
@@ -89,7 +93,7 @@ if conditions_today_int == 802:
 	conditions_statement = "it'll be partly cloudy"
 if conditions_today_int == 803:
 	conditions_statement = "it'll be cloudy"
-if conditions_today_int == 803:
+if conditions_today_int == 804:
 	conditions_statement = "it'll be overcast"
 else:
 	conditions_statement = "it's not great out"
