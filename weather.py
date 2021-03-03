@@ -83,7 +83,7 @@ if 800 <= conditions_today_int <= 802 and 65 <= high_today <= 85 and chance_of_r
 	what_kind_of_day_is_it = "It's " + random.choice(enthusiastic_words) + " day to kayak!!! "
 
 
-if 300 <= conditions_today_int <= 503 and chance_of_rain_today < 5:
+if 300 <= conditions_today_int <= 503 and chance_of_rain_today < 50:
 	conditions_statement = "it might rain"
 if conditions_today_int == 800:
 	conditions_statement = "it'll be sunny"
